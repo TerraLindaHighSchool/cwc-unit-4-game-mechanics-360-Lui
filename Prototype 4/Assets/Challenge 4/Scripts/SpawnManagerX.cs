@@ -24,7 +24,6 @@ public class SpawnManagerX : MonoBehaviour
 
         if (enemyCount == 0)
         {
-            waveCount++;
             SpawnEnemyWave(waveCount);
         }
 
