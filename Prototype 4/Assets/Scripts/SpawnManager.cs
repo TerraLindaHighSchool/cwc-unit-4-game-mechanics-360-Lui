@@ -7,11 +7,12 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
     private float spawnRange = 9.0f;
     [SerializeField] private int enemyCount;
+    [SerializeField] private int waveNumber = 1;
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnEnemyWave(3); 
+        SpawnEnemyWave(waveNumber); 
     }
 
     // Update is called once per frame
@@ -21,7 +22,8 @@ public class SpawnManager : MonoBehaviour
 
         if(enemyCount == 0)
         {
-            SpawnEnemyWave(1);
+            waveNumber++;
+            SpawnEnemyWave(waveNumber);
         }
     }
 
